@@ -21,4 +21,6 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda2-4.5.4-Linux-x86_
     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
     echo "conda activate base" >> ~/.bashrc
 
-
+RUN conda config --add channels defaults && \
+    conda config --add channels conda-forge && \
+    conda config --add channels bioconda
